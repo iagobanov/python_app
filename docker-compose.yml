@@ -1,0 +1,14 @@
+version: '2'
+services:
+  dockerapp:
+    extends:
+      file: app.yml
+      service: dockerapp
+    build: .
+    expose:
+      - 5000
+
+  redis:
+    extends:
+      file: app.yml
+      service: redis
